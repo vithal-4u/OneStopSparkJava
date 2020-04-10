@@ -1,4 +1,4 @@
-package com.spark.java.poc.utils;
+package com.spark.poc.utils;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -10,7 +10,7 @@ public class SparkUtils {
 				.setAppName(appName)
 				.setMaster("local[4]")
 				.set("spark.sql.warehouse.dir",
-						"D:\\MyPersonal\\spark-warehouse");
+						"D:\\Study_Document\\MyPersonal\\spark-warehouse");
 		return sparkConf;
 	}
 
@@ -20,7 +20,7 @@ public class SparkUtils {
 				.appName(appName)
 				.master("local[2]")
 				.config("spark.sql.warehouse.dir",
-						"D:\\MyPersonal\\spark-warehouse").getOrCreate();
+						"D:\\Study_Document\\MyPersonal\\spark-warehouse").getOrCreate();
 		return sparkSession;
 	}
 	

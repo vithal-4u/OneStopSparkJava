@@ -1,4 +1,4 @@
-package com.spark.java.poc;
+package com.spark.poc.wordcount;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
@@ -8,7 +8,7 @@ import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
 
-import com.spark.java.poc.utils.SparkUtils;
+import com.spark.poc.utils.SparkUtils;
 
 import scala.Tuple2;
 
@@ -35,8 +35,8 @@ public class WordCounter {
 
 		JavaRDD<String> words = input.flatMap(new FlatMapFunction<String, String>() {
 			@Override
-			public Iterable<String> call(String x) throws Exception {
-				return Arrays.asList(x.split(" "));
+			public Iterator<String> call(String x) throws Exception {
+				return Arrays.asList(x.split(" ")).iterator();
 			}
 
 		});
