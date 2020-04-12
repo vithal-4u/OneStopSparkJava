@@ -18,6 +18,7 @@ public class MySQLReadData {
 			.option("password", "ayyappasai")
 			.load();
 		jdbcDF.show(100);
+		
 	}
 
 }
