@@ -14,6 +14,16 @@ public class CommonUtils {
 		return line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 	}
 	
+	/**
+	 * Below method will split the row based on tab space seperated.
+	 * 
+	 * @param line
+	 * @return
+	 */
+	public static String[] splitByTab(String line) {
+		return line.split("\\t");
+	}
+	
 	/*
 	 * public static void main(String str[]) { CommonUtils utils= new CommonUtils();
 	 * utils.
