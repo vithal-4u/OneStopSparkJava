@@ -22,7 +22,7 @@ public class WordCounter {
 		String outputFile = args[1];
 		final String toFind = "framework";
 		// Create a Java Spark Context.
-		System.setProperty("hadoop.home.dir", "D:\\Unzip_Softwares\\winutils");
+		System.setProperty("hadoop.home.dir", "D:\\Unzip_Softwares\\winutils\\bin\\");
 		// SparkConf conf = new
 		// SparkConf().setAppName("wordCount").setMaster("local").set("spark.cores.max",
 		// "10");

@@ -1,5 +1,6 @@
 package com.spark.poc.mysqlConnect;
 
+import java.util.Calendar;
 import java.util.Properties;
 
 import org.apache.spark.SparkConf;
@@ -21,9 +22,9 @@ import org.apache.spark.sql.types.StructType;
 import com.spark.poc.utils.SparkUtils;
 
 public class MySQLWriteData {
-
+	
 	public static void main(String[] args) {
-		System.setProperty("hadoop.home.dir", "D:\\Unzip_Softwares\\winutils");
+		
 		
 		//Details related to MySQL connectivity
 		Properties prop = new Properties();
@@ -79,7 +80,7 @@ public class MySQLWriteData {
 		df.write().mode(SaveMode.Append)
 			.jdbc("jdbc:mysql://localhost:3306/ONESTOP_SPARK_DB", "Student_Marks", prop);
 		
-		System.out.println("Success Fully Stored Data");
+		System.out.println("Successfully Stored Data");
 			
 		
 	}
