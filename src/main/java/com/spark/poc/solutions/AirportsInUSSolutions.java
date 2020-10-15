@@ -49,7 +49,7 @@ public class AirportsInUSSolutions {
 			}
 		});
 		
-		filteredAirports.saveAsTextFile("D:\\Study_Document\\GIT\\OneStopSparkJava\\output\\");
+		filteredAirports.coalesce(1).saveAsTextFile("D:\\Study_Document\\GIT\\OneStopSparkJava\\output\\");
 		
 		
 	}
