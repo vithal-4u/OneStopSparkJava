@@ -16,10 +16,11 @@
 	</properties>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-core_2.11</artifactId>
-			<version>1.4.0</version>
+			<artifactId>spark-core_2.12</artifactId>
+			<version>2.4.5</version>
 		</dependency>
 
 		<dependency>
@@ -28,12 +29,36 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.19</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-sql_2.12</artifactId>
 			<version>2.4.5</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming_2.12</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20200518</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-twitter_2.11</artifactId>
+			<version>1.6.3</version>
+		</dependency>
+
 	</dependencies>
 </project>
